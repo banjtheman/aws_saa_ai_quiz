@@ -134,7 +134,6 @@ def save_json(json_path: str, json_data: Any) -> None:
     Returns:
         N/A
     """
-    # save sut config
     try:
         with open(json_path, "w") as outfile:
             json.dump(json_data, outfile)
