@@ -7,6 +7,7 @@ Purpose:
 import json
 from typing import Type, Union, Dict, Any, List
 import random
+from urllib.request import urlopen
 
 # 3rd party imports
 import streamlit as st
@@ -16,7 +17,11 @@ import utils
 # List of Questions
 @st.cache_data
 def load_questions():
-    question_list = utils.load_json("trim_aws_ai_gen_questions.json")["question_list"]
+    url = "https://raw.githubusercontent.com/banjtheman/aws_saa_ai_quiz/main/trim_aws_ai_gen_questions.json"
+    response = urlopen(url)
+
+    question_list = json.loads(response.read())["question_list"]
+    # question_list = utils.load_json("trim_aws_ai_gen_questions.json")["question_list"] # File too big to load?
 
     # Randomize list
     random.shuffle(question_list)
