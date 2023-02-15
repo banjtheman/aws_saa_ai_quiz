@@ -15,7 +15,8 @@ import utils
 
 
 # List of Questions
-# @st.cache_data
+# @st.cache_data TODO, not working on streamlit cloud atm
+@st.cache
 def load_questions():
     url = "https://raw.githubusercontent.com/banjtheman/aws_saa_ai_quiz/main/trim_aws_ai_gen_questions.json"
     response = urlopen(url)
