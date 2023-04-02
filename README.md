@@ -4,4 +4,4 @@ The AWS Certified Solutions Architect - Associate AI Generated Quiz is a powerfu
 
 Take the Quiz here: https://banjtheman-aws-saa-ai-quiz-aws-quiz-st-qvxt6f.streamlit.app/
 
-To learn how this created check out blog: TODO
+To learn how this created check out blog: https://dev.to/banjtheman/how-i-used-gpt-3-to-build-1000-aws-quiz-questions-fdb
